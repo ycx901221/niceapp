@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="niceapp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="niceapp.war">
+      <element id="artifact" artifact-name="niceapp:war exploded" />
+    </root>
+  </artifact>
+</component>
