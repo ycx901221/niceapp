@@ -8,56 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ae21e14-b32b-4a7e-ab9f-43ab9ece0d38" name="Default" comment="更新了配置，加入了mybatis">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/hp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_42.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/model/IResponseMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/service/AuthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/service/UserAuthServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/vmodel/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngapp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngconfig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngconstant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngcontrol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngdirective.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/app.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/app.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/control.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/nav-route.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ycx/web/niceapp/Control.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/niceapp/WEB-INF/classes/ycx/web/niceapp/Control.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/niceapp/WEB-INF/template/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/niceapp/WEB-INF/template/header.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/niceapp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/niceapp_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/niceapp.iml" afterPath="$PROJECT_DIR$/niceapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/dao/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/dao/RoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/dao/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/Control.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/Control.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/LoginHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/LoginHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/mapper/RoleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/integration/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/integration/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/footer.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/header.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/signin.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/signin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/signup.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/signup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngapp.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngapp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngconfig.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngconfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngconstant.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngconstant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngcontrol.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngcontrol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngdirective.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngdirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/integration/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/integration/spring-mybatis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/niceapp/WEB-INF/classes/integration/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/niceapp/WEB-INF/classes/integration/spring-mybatis.xml" />
@@ -94,7 +51,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1070#1071#0" expanded="false" />
+                <element signature="e#1097#1098#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,7 +65,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
               <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1429#1430#0" expanded="false" />
+                <element signature="e#1465#1466#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,6 +129,11 @@
     <option name="ONTO" value="refs/heads/master" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ycx901221 &lt;799963669@qq.com&gt;" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
@@ -1065,7 +1035,7 @@
       <workItem from="1506398408854" duration="5608000" />
       <workItem from="1506650823803" duration="81000" />
       <workItem from="1506651155596" duration="11500000" />
-      <workItem from="1507625209661" duration="27000" />
+      <workItem from="1507625209661" duration="234000" />
     </task>
     <task id="LOCAL-00001" summary="更新了配置，加入了mybatis">
       <created>1503565363011</created>
@@ -1074,11 +1044,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503565363012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新了配置，加入了mybatis">
+      <created>1507625435288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507625435288</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164068000" />
+    <option name="totallyTimeSpent" value="164275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1114,7 +1091,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27230048" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28625953" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28625953" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23206107" sideWeight="0.50980395" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1265,6 +1242,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,6 +1273,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1321,6 +1302,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="69" column="11" lean-forward="false" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+          <folding>
+            <marker date="1506181646793" expanded="true" signature="622:722" ph="select from role" />
+            <marker date="1506181646793" expanded="true" signature="808:862" ph="delete from " />
+            <marker date="1506181646793" expanded="true" signature="945:1080" ph="insert into role... " />
+            <marker date="1506181646793" expanded="true" signature="1823:2061" ph="update role " />
+            <marker date="1506181646793" expanded="true" signature="2156:2284" ph="update role " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1328,6 +1316,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="69" column="11" lean-forward="false" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+          <folding>
+            <marker date="1506181630683" expanded="true" signature="628:728" ph="select from room" />
+            <marker date="1506181630683" expanded="true" signature="814:868" ph="delete from " />
+            <marker date="1506181630683" expanded="true" signature="951:1089" ph="insert into room... " />
+            <marker date="1506181630683" expanded="true" signature="1841:2085" ph="update room " />
+            <marker date="1506181630683" expanded="true" signature="2180:2311" ph="update room " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,6 +1330,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="126" column="11" lean-forward="false" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+          <folding>
+            <marker date="1506181615076" expanded="true" signature="1006:1113" ph="select from electricity" />
+            <marker date="1506181615076" expanded="true" signature="1199:1260" ph="delete from " />
+            <marker date="1506181615076" expanded="true" signature="1350:1679" ph="insert into electricity... " />
+            <marker date="1506181615076" expanded="true" signature="3140:3825" ph="update elect... " />
+            <marker date="1506181615076" expanded="true" signature="3927:4270" ph="update elect... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,6 +1358,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding>
+            <marker date="1506221895721" expanded="true" signature="2049:2182" ph="select from user" />
+            <marker date="1506221895721" expanded="true" signature="2295:2397" ph="SELECT FROM USER" />
+            <marker date="1506221895721" expanded="true" signature="2487:2541" ph="delete from " />
+            <marker date="1506221895721" expanded="true" signature="2627:3226" ph="insert into user... " />
+            <marker date="1506221895721" expanded="true" signature="6328:7811" ph="update user " />
+            <marker date="1506221895721" expanded="true" signature="7910:8532" ph="update user " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,6 +1387,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,6 +1395,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="149" column="5" lean-forward="false" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <element signature="e#2700#2701#0" expanded="false" />
+            <element signature="e#2730#2731#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,6 +1420,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,6 +1506,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,6 +1514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-478">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,6 +1522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,7 +1531,7 @@
         <state relative-caret-position="51">
           <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding>
-            <element signature="e#154#177#0#HTML" expanded="true" />
+            <element signature="e#154#177#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1521,6 +1540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="91" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="91" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,7 +1548,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1070#1071#0" expanded="false" />
+            <element signature="e#1097#1098#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,7 +1568,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1429#1430#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
