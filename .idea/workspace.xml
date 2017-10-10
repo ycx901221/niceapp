@@ -9,8 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3ae21e14-b32b-4a7e-ab9f-43ab9ece0d38" name="Default" comment="更新了配置，加入了mybatis">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ycx/web/niceapp/Control.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -250,6 +248,11 @@
             <path>
               <item name="niceapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="niceapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="niceapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niceapp" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="niceapp" type="b2602c69:ProjectViewProjectNode" />
@@ -888,7 +891,7 @@
       <workItem from="1506650823803" duration="81000" />
       <workItem from="1506651155596" duration="11500000" />
       <workItem from="1507625209661" duration="234000" />
-      <workItem from="1507640926110" duration="2860000" />
+      <workItem from="1507640926110" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="更新了配置，加入了mybatis">
       <created>1503565363011</created>
@@ -904,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507625435288</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新了配置，加入了mybatis">
+      <created>1507645658562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507645658562</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167135000" />
+    <option name="totallyTimeSpent" value="167238000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
