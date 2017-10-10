@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.niceapp.dao.EWatchHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.web.niceapp.model.EWatchHistory">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <!--<result column="ewatch_id" jdbcType="INTEGER" property="ewatchId" />-->
+    <!--<result column="user_id" jdbcType="INTEGER" property="userId" />-->
+    <association property="ewatch" javaType="com.web.niceapp.model.EWatch">
+      <id property="id" column="ewatch_id"/>
+      <result property="name" column="ewatch_name"/>
+      <result property="number" column="ewatch_number"/>
+      <result property="yardage" column="ewatch_yardage"/>
+      <result property="unit" column="ewatch_unit"/>
+      <result property="type" column="ewatch_type"/>
+    </association>
+
+    <association property="user" column="user_id" select="com.web.niceapp.mapper.UserMapper.">
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    ewh.id, ewh.name,ewh.date,ewh.yardage,ew.id as ewatch_id,ew.name as ewatch_name,
+    ew.number as ewatch_number,ew.yardage as ewatch_yardage,ew.unit as ewatch_unit,
+    ew.type as ewatch_type,ewh.user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ewatchhistory ewh,ewatch ew,user u
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ewatchhistory
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.web.niceapp.model.EWatchHistory">
+    insert into ewatchhistory (id, name, ewatch_id, 
+      user_id)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{eWatch.id,jdbcType=INTEGER},
+      #{user.id,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.web.niceapp.model.EWatchHistory">
+    insert into ewatchhistory
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="ewatchId != null">
+        ewatch_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="ewatchId != null">
+        #{ewatchId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.web.niceapp.model.EWatchHistory">
+    update ewatchhistory
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="ewatchId != null">
+        ewatch_id = #{ewatchId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.web.niceapp.model.EWatchHistory">
+    update ewatchhistory
+    set name = #{name,jdbcType=VARCHAR},
+      ewatch_id = #{eWatch.id,jdbcType=INTEGER},
+      user_id = #{user.id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
