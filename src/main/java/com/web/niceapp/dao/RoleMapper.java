@@ -1,6 +1,7 @@
 package com.web.niceapp.dao;
 
 import com.web.niceapp.model.Role;
+import org.springframework.stereotype.Repository;
 
 public interface RoleMapper {
     int deleteByPrimaryKey(Integer id);

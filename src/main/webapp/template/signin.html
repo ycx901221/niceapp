@@ -1,3 +1,100 @@
-<div>
-    <h1>登录</h1>
+<div ng-controller="loginviewshowCtrl as lsc" style="margin-top: 120px">
+    <div ng-if="lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block" ng-controller="signinController">
+        <!--水平表单-->
+        <form class="form-horizontal" ng-submit="login(logindata)" role="form" id="login_form">
+            <fieldset>
+                <legend>用户登陆</legend>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="lusername">用户名</label>
+                    <div class="col-md-9">
+                        <input type="text" id="lusername" class="form-control" name="username"
+                               ng-model="logindata.username"
+                               placeholder="请输入用户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="lpassword">密码</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" id="lpassword" name="password"
+                               ng-model="logindata.password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- Multiple Checkboxes -->
+                    <div class="col-md-offset-3 col-md-9">
+                        <input type="checkbox" id="rememberme" value="rememberme">
+                        <label class="control-label" for="rememberme">
+                            记住密码
+                        </label>
+                        <label class="control-label pull-right">
+                            <a href='javascript:void(0);' id="forget_link">忘记密码？</a>
+                        </label>
+                    </div>
+                    <div class="col-md-offset-3 col-md-9">
+                        <input type="checkbox" value="autosignin" id="autosignin">
+                        <label class="control-label" for="autosignin">
+                            自动登录
+                        </label>
+                    </div>
+                </div>
+                <!--登录按钮-->
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button type="submit" class="btn btn-default btn-block">登录</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-9">
+                        <span class="text-info">还没有帐号？</span>
+                        <label class="control-label">
+                            <a ng-click="lsc.changeStatus(!lsc._isShowLogin)" href='javascript:void(0);' id="register_link">立即注册！</a>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!--<pre>-->
+        <!--{{logindata}}-->
+        <!--</pre>-->
+    </div>
+
+    <div  ng-if="!lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block" ng-controller="signupController">
+        <!--水平表单-->
+        <form class="form-horizontal" ng-submit="register(signupdata)" role="form" id="register_form">
+            <fieldset>
+                <legend>用户注册</legend>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="username">用户名</label>
+                    <div class="col-md-9">
+                        <input type="text" id="username" class="form-control" name="username"
+                               ng-model="signupdata.username" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="password">密码</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" id="password" name="password"
+                               ng-model="signupdata.password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="password">确认密码</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" id="password2" name="password2"
+                               ng-model="signupdata.password2" placeholder="请再次输入密码">
+                    </div>
+                </div>
+                <!--注册按钮-->
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button type="submit" class="btn btn-default btn-block">注册</button>
+                        <input type="button" ng-click="lsc.changeStatus(!lsc._isShowLogin)" class="btn btn-default btn-block pull-left" id="back_btn" value="返回"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!--<pre>-->
+        <!--{{signupdata}}-->
+        <!--</pre>-->
+    </div>
 </div>

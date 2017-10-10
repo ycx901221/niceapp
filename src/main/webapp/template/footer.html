@@ -1,12 +1,28 @@
-﻿<!--底栏-->
-<footer class="footer navbar-fixed-bottom">
+﻿<footer class="footer navbar-fixed-bottom">
 
 </footer>
-<script src="/script/third/jquery.min.js"></script>
 <script src="/script/third/bootstrap.min.js"></script>
 <script src="/script/third/angular-route.min.js"></script>
-<script src="/script/own/app.module.js"></script>
-<script src="/script/own/control.js"></script>
-<script src="/script/own/app.config.js"></script>
+<script src="/script/own/ngapp.js"></script>
+<script src="/script/own/ngcontrol.js"></script>
+<script src="/script/own/ngconfig.js"></script>
+<script src="/script/own/ngdirective.js"></script>
+<script src="/script/own/ngconstant.js"></script>
+<script>
+    //    导航切换active
+    $(function(){
+        $("#mainnav").find("li").click(function(){
+            $('.nav li').removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+    //    点击下拉的li后自动收回
+    $(".nav > li > a").click(function(){
+        $('.navbar-toggle').addClass("collapsed");
+        $('.navbar-toggle').attr("aria-expanded",false);
+        $(".navbar-collapse").removeClass("in");
+        $(".navbar-collapse").attr("aria-expanded",false);
+    });
+</script>
 </body>
 </html>

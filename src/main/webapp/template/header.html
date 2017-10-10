@@ -1,12 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/third/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/own/style.css">
+    <!--<link rel="stylesheet" href="/css/own/style.css">-->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="/script/third/jquery.min.js"></script>
     <script src="/script/third/angular.min.js"></script>
+    <style>
+        body {
+            font-family: '微软雅黑';
+            font-size: 18px;
+        }
+
+        span.badge {
+            font-size: 12px;
+        }
+
+        button,input {
+            outline: none;
+        }
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
-<body ng-app="routingApp">
+<body ng-app="ngapp" ng-controller="ApplicationController">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <!--首页图标-->
@@ -18,18 +41,25 @@
                 <span class="icon-bar"></span>
             </button>
             <img class="navbar-brand" src="/images/nav-logo.png">
-            <a class="navbar-brand" href="hello">美好网</a>
+            <a class="navbar-brand" href="hello">XXX系统</a>
         </div>
         <!--导航内容-->
+        <!--导航内容-->
         <div class="navbar-collapse collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li class="hidden-sm hidden-md"><a href="#/article">文章</a></li>
-                <li><a href="#/work">工作</a></li>
-                <li><a href="#/data">数据</a></li>
-                <li><a href="#/manage">管理</a></li>
+            <ul id="mainnav" class="nav navbar-nav">
+                <li><a href="#/customer">客户</a></li>
+                <li><a href="#/product">产品</a></li>
+                <li><a href="#/enquirement">询价</a></li>
+                <li><a href="#/quotation">报价</a></li>
+                <li><a href="#/message"><span class="badge pull-right">3</span>消息通知</a></li>
+                <li><a href="#/setting">设置</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right hidden-sm">
-                <li><a href="#/signin">登录</a></li>
+                <li><img class="img-circle" src="/images/hp.png" alt="头像" width="32px" height="32px" style="margin: 9px auto auto 18px;"></li>
+                <li ng-if="!isAuthorized"><a href="#/signin"><span
+                        class="glyphicon glyphicon glyphicon-user"></span> 登录</a></li>
+                <li ng-if="isAuthorized"><a href="#/signout"><span
+                        class="glyphicon glyphicon-log-out"></span> 退出</a></li>
             </ul>
         </div>
     </div>

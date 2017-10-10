@@ -14,37 +14,51 @@
         <result column="logindate" jdbcType="TIMESTAMP" property="logindate"/>
         <result column="loginip" jdbcType="VARCHAR" property="loginip"/>
         <association property="role" javaType="com.web.niceapp.model.Role">
-            <id property="id" column="id"/>
-            <result property="name" column="name"/>
-            <result property="type" column="type"/>
+            <id property="id" column="role_id"/>
+            <result property="name" column="role_name"/>
+            <result property="type" column="role_type"/>
+        </association>
+        <association property="room" javaType="com.web.niceapp.model.Room">
+            <id property="id" column="room_id"/>
+            <result property="name" column="room_name"/>
+            <result property="address" column="room_address"/>
         </association>
     </resultMap>
-    <sql id="Base_Column_List">
-    id, name, role_id, room_id, tel, gender, thumbnail, createdate, modifydate, lastlogindate, 
-    lastloginip, logindate, loginip
-  </sql>
+    <sql id="query_column_list">
+        u.id, u.name, u.tel, u.gender, u.thumbnail, u.createdate, u.modifydate, u.lastlogindate,
+        u.lastloginip, u.logindate, u.loginip,rol.id role_id,rol.name role_name,rol.type role_type,
+        roo.id room_id,roo.name room_name,roo.address room_address
+    </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List"/>
-        from user
-        where id = #{id,jdbcType=INTEGER}
+        <include refid="query_column_list"/>
+        from user u,role rol,room roo
+        where u.id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        u.id,u.name
+        FROM niceapp.user u
+        WHERE u.name = #{name,jdbcType=VARCHAR}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
     <insert id="insert" parameterType="com.web.niceapp.model.User">
     insert into user (id, name, role_id, 
       room_id, tel, gender, 
       thumbnail, createdate, modifydate, 
       lastlogindate, lastloginip, logindate, 
       loginip)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, 
-      #{roomId,jdbcType=INTEGER}, #{tel,jdbcType=INTEGER}, #{gender,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{role.id,jdbcType=INTEGER},
+      #{room.id,jdbcType=INTEGER}, #{tel,jdbcType=INTEGER}, #{gender,jdbcType=VARCHAR},
       #{thumbnail,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, #{modifydate,jdbcType=TIMESTAMP}, 
       #{lastlogindate,jdbcType=TIMESTAMP}, #{lastloginip,jdbcType=VARCHAR}, #{logindate,jdbcType=TIMESTAMP}, 
       #{loginip,jdbcType=VARCHAR})
   </insert>
+
     <insert id="insertSelective" parameterType="com.web.niceapp.model.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -54,11 +68,15 @@
             <if test="name != null">
                 name,
             </if>
-            <if test="roleId != null">
-                role_id,
+            <if test="role != null">
+                <if test="role.id != null">
+                    role_id,
+                </if>
             </if>
-            <if test="roomId != null">
-                room_id,
+            <if test="room != null">
+                <if test="room.id != null">
+                    room_id,
+                </if>
             </if>
             <if test="tel != null">
                 tel,
@@ -95,195 +113,15 @@
             <if test="name != null">
                 #{name,jdbcType=VARCHAR},
             </if>
-            <if test="roleId != null">
-                #{roleId,jdbcType=INTEGER},
+            <if test="role != null">
+                <if test="role.id != null">
+                    #{role.id,jdbcType=INTEGER},
+                </if>
             </if>
-            <if test="roomId != null">
-                #{roomId,jdbcType=INTEGER},
-            </if>
-            <if test="tel != null">
-                #{tel,jdbcType=INTEGER},
-            </if>
-            <if test="gender != null">
-                #{gender,jdbcType=VARCHAR},
-            </if>
-            <if test="thumbnail != null">
-                #{thumbnail,jdbcType=VARCHAR},
-            </if>
-            <if test="createdate != null">
-                #{createdate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="modifydate != null">
-                #{modifydate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="lastlogindate != null">
-                #{lastlogindate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="lastloginip != null">
-                #{lastloginip,jdbcType=VARCHAR},
-            </if>
-            <if test="logindate != null">
-                #{logindate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="loginip != null">
-                #{loginip,jdbcType=VARCHAR},
-            </if>
-        </trim>
-    </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.web.niceapp.model.User">
-        update user
-        <set>
-            <if test="name != null">
-                name = #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="roleId != null">
-                role_id = #{roleId,jdbcType=INTEGER},
-            </if>
-            <if test="roomId != null">
-                room_id = #{roomId,jdbcType=INTEGER},
-            </if>
-            <if test="tel != null">
-                tel = #{tel,jdbcType=INTEGER},
-            </if>
-            <if test="gender != null">
-                gender = #{gender,jdbcType=VARCHAR},
-            </if>
-            <if test="thumbnail != null">
-                thumbnail = #{thumbnail,jdbcType=VARCHAR},
-            </if>
-            <if test="createdate != null">
-                createdate = #{createdate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="modifydate != null">
-                modifydate = #{modifydate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="lastlogindate != null">
-                lastlogindate = #{lastlogindate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="lastloginip != null">
-                lastloginip = #{lastloginip,jdbcType=VARCHAR},
-            </if>
-            <if test="logindate != null">
-                logindate = #{logindate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="loginip != null">
-                loginip = #{loginip,jdbcType=VARCHAR},
-            </if>
-        </set>
-        where id = #{id,jdbcType=INTEGER}
-    </update>
-    <update id="updateByPrimaryKey" parameterType="com.web.niceapp.model.User">
-    update user
-    set name = #{name,jdbcType=VARCHAR},
-      role_id = #{roleId,jdbcType=INTEGER},
-      room_id = #{roomId,jdbcType=INTEGER},
-      tel = #{tel,jdbcType=INTEGER},
-      gender = #{gender,jdbcType=VARCHAR},
-      thumbnail = #{thumbnail,jdbcType=VARCHAR},
-      createdate = #{createdate,jdbcType=TIMESTAMP},
-      modifydate = #{modifydate,jdbcType=TIMESTAMP},
-      lastlogindate = #{lastlogindate,jdbcType=TIMESTAMP},
-      lastloginip = #{lastloginip,jdbcType=VARCHAR},
-      logindate = #{logindate,jdbcType=TIMESTAMP},
-      loginip = #{loginip,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-    <resultMap id="BaseResultMap" type="com.web.niceapp.model.User">
-        <id column="id" jdbcType="INTEGER" property="id"/>
-        <result column="name" jdbcType="VARCHAR" property="name"/>
-        <result column="role_id" jdbcType="INTEGER" property="roleId"/>
-        <result column="room_id" jdbcType="INTEGER" property="roomId"/>
-        <result column="tel" jdbcType="INTEGER" property="tel"/>
-        <result column="gender" jdbcType="VARCHAR" property="gender"/>
-        <result column="thumbnail" jdbcType="VARCHAR" property="thumbnail"/>
-        <result column="createdate" jdbcType="TIMESTAMP" property="createdate"/>
-        <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate"/>
-        <result column="lastlogindate" jdbcType="TIMESTAMP" property="lastlogindate"/>
-        <result column="lastloginip" jdbcType="VARCHAR" property="lastloginip"/>
-        <result column="logindate" jdbcType="TIMESTAMP" property="logindate"/>
-        <result column="loginip" jdbcType="VARCHAR" property="loginip"/>
-    </resultMap>
-    <sql id="Base_Column_List">
-    id, name, role_id, room_id, tel, gender, thumbnail, createdate, modifydate, lastlogindate, 
-    lastloginip, logindate, loginip
-  </sql>
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from user
-        where id = #{id,jdbcType=INTEGER}
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from user
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-    <insert id="insert" parameterType="com.web.niceapp.model.User">
-    insert into user (id, name, role_id, 
-      room_id, tel, gender, 
-      thumbnail, createdate, modifydate, 
-      lastlogindate, lastloginip, logindate, 
-      loginip)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, 
-      #{roomId,jdbcType=INTEGER}, #{tel,jdbcType=INTEGER}, #{gender,jdbcType=VARCHAR}, 
-      #{thumbnail,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, #{modifydate,jdbcType=TIMESTAMP}, 
-      #{lastlogindate,jdbcType=TIMESTAMP}, #{lastloginip,jdbcType=VARCHAR}, #{logindate,jdbcType=TIMESTAMP}, 
-      #{loginip,jdbcType=VARCHAR})
-  </insert>
-    <insert id="insertSelective" parameterType="com.web.niceapp.model.User">
-        insert into user
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                id,
-            </if>
-            <if test="name != null">
-                name,
-            </if>
-            <if test="roleId != null">
-                role_id,
-            </if>
-            <if test="roomId != null">
-                room_id,
-            </if>
-            <if test="tel != null">
-                tel,
-            </if>
-            <if test="gender != null">
-                gender,
-            </if>
-            <if test="thumbnail != null">
-                thumbnail,
-            </if>
-            <if test="createdate != null">
-                createdate,
-            </if>
-            <if test="modifydate != null">
-                modifydate,
-            </if>
-            <if test="lastlogindate != null">
-                lastlogindate,
-            </if>
-            <if test="lastloginip != null">
-                lastloginip,
-            </if>
-            <if test="logindate != null">
-                logindate,
-            </if>
-            <if test="loginip != null">
-                loginip,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                #{id,jdbcType=INTEGER},
-            </if>
-            <if test="name != null">
-                #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="roleId != null">
-                #{roleId,jdbcType=INTEGER},
-            </if>
-            <if test="roomId != null">
-                #{roomId,jdbcType=INTEGER},
+            <if test="room != null">
+                <if test="room.id != null">
+                    #{room.id,jdbcType=INTEGER},
+                </if>
             </if>
             <if test="tel != null">
                 #{tel,jdbcType=INTEGER},
@@ -320,11 +158,11 @@
             <if test="name != null">
                 name = #{name,jdbcType=VARCHAR},
             </if>
-            <if test="roleId != null">
-                role_id = #{roleId,jdbcType=INTEGER},
+            <if test="role.id != null">
+                role_id = #{role.id ,jdbcType=INTEGER},
             </if>
-            <if test="roomId != null">
-                room_id = #{roomId,jdbcType=INTEGER},
+            <if test="room.id != null">
+                room_id = #{room.id,jdbcType=INTEGER},
             </if>
             <if test="tel != null">
                 tel = #{tel,jdbcType=INTEGER},
@@ -359,8 +197,8 @@
     <update id="updateByPrimaryKey" parameterType="com.web.niceapp.model.User">
     update user
     set name = #{name,jdbcType=VARCHAR},
-      role_id = #{roleId,jdbcType=INTEGER},
-      room_id = #{roomId,jdbcType=INTEGER},
+      role_id = #{role.id,jdbcType=INTEGER},
+      room_id = #{room.id,jdbcType=INTEGER},
       tel = #{tel,jdbcType=INTEGER},
       gender = #{gender,jdbcType=VARCHAR},
       thumbnail = #{thumbnail,jdbcType=VARCHAR},

@@ -1,15 +1,13 @@
 package com.web.niceapp.model;
 
+import com.web.niceapp.vmodel.Message;
+
 import java.util.Date;
 
-public class User {
+public class User implements IResponseMessage{
     private Integer id;
 
     private String name;
-
-    private Integer roleId;
-
-    private Integer roomId;
 
     private Integer tel;
 
@@ -32,6 +30,8 @@ public class User {
     private Room room;
 
     private Role role;
+
+    private Message message;
 
     public Role getRole() {
         return role;
@@ -63,22 +63,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
-    }
-
-    public Integer getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(Integer roomId) {
-        this.roomId = roomId;
     }
 
     public Integer getTel() {
@@ -151,5 +135,17 @@ public class User {
 
     public void setLoginip(String loginip) {
         this.loginip = loginip;
+    }
+
+    public void setResMessage(String status,String content) {
+        if(message == null){
+            message = new Message();
+        }
+        message.setContent(content);
+        message.setStatus(status);
+    }
+
+    public Message getMessage() {
+        return message;
     }
 }
