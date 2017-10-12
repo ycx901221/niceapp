@@ -62,8 +62,10 @@
             $scope.login = function (credentials) {
                 console.log('login', credentials);
                 AuthService.login(credentials).then(function (user) {
+                    var userjson = angular.toJson(user)
+                    console.log('login_res', userjson);
                     $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-                    $scope.$parent.setCurrentUser(user);
+                    $scope.$parent.setCurrentUser(userjson);
                 }, function () {
                     $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
                 });

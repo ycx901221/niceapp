@@ -37,22 +37,25 @@ public class LoginHandler {
     /**
      * 登录
      *
-     * @param request
      */
-    @RequestMapping(value = "/signin", method = RequestMethod.POST)
+    @RequestMapping(value = "/signin", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.POST)
     @ResponseBody
-    public void login(HttpServletRequest request) {
-        System.out.println();
+    public User login(@RequestBody String data) throws  Exception{
+        if(data != null && !"".equals(data)){
+            JSONObject jsonObject = JSONObject.parseObject(data);
+            User user = userAuthService.login(jsonObject);
+            return user;
+        }
+        return null;
     }
 
     /**
      * 注册
      *
-     * @param data
      */
-    @RequestMapping(value = "/signup",produces = MediaType.APPLICATION_JSON_UTF8_VALUE,method = RequestMethod.POST)
+    @RequestMapping(value = "/signup", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.POST)
     @ResponseBody
-    public User signup(@RequestBody String data) throws Exception{
+    public User signup(@RequestBody String data) throws Exception {
         User user = null;
         if (data != null && !"".equals(data)) {
             JSONObject jsonObject = JSONObject.parseObject(data);

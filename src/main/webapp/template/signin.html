@@ -1,5 +1,5 @@
 <div ng-controller="loginviewshowCtrl as lsc" style="margin-top: 120px">
-    <div ng-if="lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block" ng-controller="signinController">
+    <div ng-if="lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block modal-content" ng-controller="signinController">
         <!--水平表单-->
         <form class="form-horizontal" ng-submit="login(logindata)" role="form" id="login_form">
             <fieldset>
@@ -58,7 +58,7 @@
         <!--</pre>-->
     </div>
 
-    <div  ng-if="!lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block" ng-controller="signupController">
+    <div  ng-if="!lsc._isShowLogin" class="col-xs-9 col-sm-7 col-md-4 col-center-block modal-content" ng-controller="signupController">
         <!--水平表单-->
         <form class="form-horizontal" ng-submit="register(signupdata)" role="form" id="register_form">
             <fieldset>

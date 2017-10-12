@@ -4,6 +4,7 @@
 var app = angular.module('ngapp', ['ngRoute']);
 app.service('Session', Session);
 app.factory('AuthService', ['$location', '$http', 'Session', AuthService]);
+
 /**
  * Session服务
  * @constructor
@@ -43,11 +44,10 @@ function AuthService($location, $http, Session) {
         var http = $http({
             method: 'POST', url: 'http://' + $location.host() + ':'
             + $location.port() + '/authority/signin',
-            data: '{username: credentials.username, password: credentials.password}'
+            data: JSON.stringify({username: credentials.username, password: credentials.password})
         });
         return http.then(function successCallback(res) {
-            Session.create(res.data.sessionid, res.data.userid,
-                res.data.role);
+            Session.create(res.data.sessionid, res.data.userid, res.data.role);
             console.log('AuthService login success');
             return res.data;
         }, function errorCallback(response) {
@@ -97,8 +97,7 @@ function AuthService($location, $http, Session) {
             authorizedRoles = [authorizedRoles];
         }
         return (authService.isAuthenticated() &&
-        authorizedRoles.indexOf(Session.userRole) !== -1);
+            authorizedRoles.indexOf(Session.userRole) !== -1);
     };
-
     return authService;
 }

@@ -18,7 +18,11 @@ public class UserAuthServiceImpl implements AuthService{
     @Autowired
     UserMapper userDao;
 
-
+    /**
+     * 注册
+     * @param json
+     * @return
+     */
     public User signin(JSONObject json) {
         String name = json.getString("username");
         User user = userDao.selectByName(name);
@@ -35,7 +39,17 @@ public class UserAuthServiceImpl implements AuthService{
         return user;
     }
 
+    /**
+     * 登录
+     * @param json
+     * @return
+     */
     public User login(JSONObject json) {
-        return null;
+        String name = json.getString("username");
+        User user = userDao.selectByName(name);
+        if(user != null){
+            user.setResMessage(Message.STATUS_SUCCESS,"用户登录成功");
+        }
+        return user;
     }
 }

@@ -9,6 +9,7 @@ angular.module('ngapp').config(['$routeProvider', function ($routeProvider) {
         .when('/enquirement', {template: '这是询价页面'})
         .when('/quotation', {template: '这是报价页面'})
         .when('/message', {template: '这是消息通知页面'})
+        .when('/tools',{templateUrl:'/template/tools.html'})
         .when('/setting',{template:'这是设置页面'})
         .when('/signin', {templateUrl: '/template/signin.html',controller:'signinController'});
         // .when('/signup', {templateUrl: '/html/signup.html',controller:'signupController'})
