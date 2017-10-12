@@ -6,18 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae21e14-b32b-4a7e-ab9f-43ab9ece0d38" name="Default" comment="更新了配置，加入了mybatis">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/template/tools.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ycx/web/niceapp/Control.class" afterPath="" />
+    <list default="true" id="3ae21e14-b32b-4a7e-ab9f-43ab9ece0d38" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/LoginHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/handler/LoginHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/web/niceapp/service/UserAuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/web/niceapp/service/UserAuthServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngapp.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngapp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngconfig.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngconfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script/own/ngcontrol.js" afterPath="$PROJECT_DIR$/src/main/webapp/script/own/ngcontrol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/header.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template/signin.html" afterPath="$PROJECT_DIR$/src/main/webapp/template/signin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/niceapp/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/niceapp/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -972,7 +962,7 @@
       <workItem from="1507640926110" duration="4358000" />
       <workItem from="1507696806592" duration="5519000" />
       <workItem from="1507714953179" duration="876000" />
-      <workItem from="1507771907260" duration="12099000" />
+      <workItem from="1507771907260" duration="13433000" />
     </task>
     <task id="LOCAL-00001" summary="更新了配置，加入了mybatis">
       <created>1503565363011</created>
@@ -1002,11 +992,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507645739627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="更新了配置，加入了mybatis">
+      <created>1507801153385</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507801153386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187127000" />
+    <option name="totallyTimeSpent" value="188461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1030,14 +1027,14 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.019847328" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="854" y="80" width="327" height="448" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15165877" sideWeight="0.4954683" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40126383" sideWeight="0.4954683" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22580644" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35545024" sideWeight="0.4946565" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21958926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21958926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27230048" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
